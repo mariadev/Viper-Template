@@ -20,6 +20,7 @@ class HomePresenter  {
 extension HomePresenter: HomePresenterProtocol {
     // TODO: implement presenter methods
     func viewDidLoad() {
+        print("me ha llamado la vista")
     }
 }
 
