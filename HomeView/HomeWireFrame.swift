@@ -38,4 +38,14 @@ class HomeWireFrame: HomeWireFrameProtocol {
         return UIStoryboard(name: "HomeView", bundle: Bundle.main)
     }
     
+    func presentNewViewDeatil(from view:  HomeViewProtocol, withData: DataURL) {
+        
+        let newDetailView = DetailWireFrame.createDetailModule(with: withData)
+        
+        if let newView = view as? UIViewController {
+            newView.navigationController?.pushViewController(newDetailView, animated: true)
+        }
+    }
+    
+    
 }
