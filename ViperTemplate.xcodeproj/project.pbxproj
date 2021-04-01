@@ -33,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C1D811B261665CC00D47198 /* ViperTemplate copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ViperTemplate copy-Info.plist"; path = "/Users/maria/Documents/swift/FINISHAPPS/Viper-Template/ViperTemplate copy-Info.plist"; sourceTree = "<absolute>"; };
 		4C8A30EE25C9D71E00160437 /* ViperTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C8A30F125C9D71E00160437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C8A30F325C9D71E00160437 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,13 +72,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C1D80FA2616588700D47198 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				4C8A312725CB563A00160437 /* DetailLocalDataManager.swift */,
+				4C8A312B25CB563A00160437 /* DetailRemoteDataManager.swift */,
+				4C8A310B25C9DA7500160437 /* HomeRemoteDataManager.swift */,
+				4C8A310725C9DA7500160437 /* HomeLocalDataManager.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		4C1D811F2616669D00D47198 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4C8A312025CB350F00160437 /* CategoryURL.swift */,
+				4C8A312325CB492700160437 /* DataURL.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		4C1D81222616673F00D47198 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4C8A312825CB563A00160437 /* DetailProtocols.swift */,
+				4C8A310825C9DA7500160437 /* HomeProtocols.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		4C8A30E525C9D71E00160437 = {
 			isa = PBXGroup;
 			children = (
-				4C8A311525C9DA7F00160437 /* HomeView */,
-				4C8A313525CB564000160437 /* DetailView */,
+				4C1D81222616673F00D47198 /* Protocols */,
+				4C1D811F2616669D00D47198 /* Entities */,
+				4C1D80FA2616588700D47198 /* DataSource */,
+				4C8A311525C9DA7F00160437 /* HomeModule */,
+				4C8A313525CB564000160437 /* DetailModule */,
 				4C8A30F025C9D71E00160437 /* ViperTemplate */,
 				4C8A30EF25C9D71E00160437 /* Products */,
+				4C1D811B261665CC00D47198 /* ViperTemplate copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,36 +136,28 @@
 			path = ViperTemplate;
 			sourceTree = "<group>";
 		};
-		4C8A311525C9DA7F00160437 /* HomeView */ = {
+		4C8A311525C9DA7F00160437 /* HomeModule */ = {
 			isa = PBXGroup;
 			children = (
 				4C8A311825C9E77900160437 /* HomeView.storyboard */,
 				4C8A310C25C9DA7500160437 /* HomeWireFrame.swift */,
-				4C8A310B25C9DA7500160437 /* HomeRemoteDataManager.swift */,
 				4C8A310A25C9DA7500160437 /* HomeView.swift */,
 				4C8A310925C9DA7500160437 /* HomeInteractor.swift */,
-				4C8A310825C9DA7500160437 /* HomeProtocols.swift */,
-				4C8A310725C9DA7500160437 /* HomeLocalDataManager.swift */,
 				4C8A310625C9DA7500160437 /* HomePresenter.swift */,
-				4C8A312025CB350F00160437 /* CategoryURL.swift */,
-				4C8A312325CB492700160437 /* DataURL.swift */,
 			);
-			path = HomeView;
+			path = HomeModule;
 			sourceTree = "<group>";
 		};
-		4C8A313525CB564000160437 /* DetailView */ = {
+		4C8A313525CB564000160437 /* DetailModule */ = {
 			isa = PBXGroup;
 			children = (
 				4C8A313C25CB59BF00160437 /* DetailView.storyboard */,
 				4C8A312C25CB563A00160437 /* DetailWireFrame.swift */,
-				4C8A312B25CB563A00160437 /* DetailRemoteDataManager.swift */,
 				4C8A312A25CB563A00160437 /* DetailView.swift */,
 				4C8A312925CB563A00160437 /* DetailInteractor.swift */,
-				4C8A312825CB563A00160437 /* DetailProtocols.swift */,
-				4C8A312725CB563A00160437 /* DetailLocalDataManager.swift */,
 				4C8A312625CB563A00160437 /* DetailPresenter.swift */,
 			);
-			path = DetailView;
+			path = DetailModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
